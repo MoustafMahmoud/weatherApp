@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="icon" href="./imgs/pngwing.com (2).png" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Forecast</title>
+  </head>
+  <body>
+    <section id="bg">
+      <div class="container-fluid min-vh-100 ">
+        <div class="row p-md-3 min p-1">
+
+          <div class="col-12 col-sm-10 col-xl-11 min-vh-100">
+            <div class="col-lg-8 ms-2">
+              <!---------------------- Input Search ---------------------->
+              <input
+                type="text"
+                placeholder="Search for cities..."
+                class="py-2 form-control text-white border-0 w-75 text-center m-auto"
+              />
+            </div>
+            <div class="inner mt-3 container-fluid">
+              <div class="row">
+                <!---------------------- Start middle Side ---------------------->
+                <div class="col-lg-8">
+                  <div class="inner rounded-4 container-fluid">
+                    <div class="row gy-2">
+                      <!---------------------- Start City and info ---------------------->
+
+                      <div class="text-white h-33 bg-main-sub rounded-4">
+                        <div class="container-fluid">
+                          <div class="row justify-content-between">
+                            <div class="col-sm-6">
+                              <h2 class="cityName display-5 fw-bold pt-4"></h2>
+                              <p class="text-white-50">
+                                Chance of rain:
+                                <span class="chanceRain"></span>%
+                              </p>
+                              <br />
+                              <br />
+
+                              <h2 class="display-5 fw-bold">
+                                <span class="cityTemp"></span>°
+                              </h2>
+                            </div>
+                            <div class="col-sm-4">
+                              <img
+                                class="cityImgState w-50"
+                                src="https://cdn.weatherapi.com/weather/64x64/day/176.png"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!---------------------- End City and info ---------------------->
+                      <!---------------------- Start Today's Fordcast ---------------------->
+
+                      <div class="h-33 px-0">
+                        <div
+                          class="inner container-fluid text-white p-3 bg-main-sub rounded-4"
+                        >
+                          <p>Today's Fordcast</p>
+                          <div class="fotcastOverFlow">
+                            <div class="row forcastScroll"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!---------------------- End Today's Fordcast ---------------------->
+                      <!---------------------- Start Air condition ---------------------->
+
+                      <div class="h-33 p-0">
+                        <div
+                          class="inner bg-main-sub p-3 rounded-4 container-fluid"
+                        >
+                          <div
+                            class="row g-1 airCondationPart text-white-50"
+                          ></div>
+                        </div>
+                      </div>
+                      <!---------------------- end Air condition ---------------------->
+                    </div>
+                  </div>
+                </div>
+                <!---------------------- End Middle Side ---------------------->
+                <!---------------------- Start 7-Day's Fordcast Side ---------------------->
+
+                <div class="col-lg-4 px-lg-2">
+                  <div
+                    class="inner p-2 order-lg-first mt-2 mt-lg-0 pt-3 text-white-50 bg-main-sub rounded-4 h-100"
+                  >
+                    <p class="pt-2 px-2">
+                      <span class="numDays"> 7 </span>-Day's Forecast
+                    </p>
+                    <div class="container-fluid weekForcast"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-main-sub rounded-4 text-white">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Astro & Air Condations
+            </h5>
+            <button
+              type="button"
+              class="text-white bg-transparent btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              X
+            </button>
+          </div>
+          <div class="modal-body container-fluid"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>
